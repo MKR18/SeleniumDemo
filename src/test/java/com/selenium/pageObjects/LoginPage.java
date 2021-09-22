@@ -29,6 +29,10 @@ public class LoginPage {
 	@CacheLookup
 	WebElement btn_login;
 	
+	@FindBy(xpath="/html/body/div[3]/div/ul/li[15]/a")
+	@CacheLookup
+	WebElement lnkLogout;
+	
 	public void setUserName(String username) {
 		User_name.sendKeys(username);
 	
@@ -41,6 +45,11 @@ public class LoginPage {
 	
 	public void clickLoginbtn() {
 		btn_login.click();
+	}
+	
+	
+	public void clickLogOutbtn() {
+		lnkLogout.click();
 	}
 	
 	
